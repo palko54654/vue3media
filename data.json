@@ -1,0 +1,36 @@
+{
+  "media": [
+    {
+      "guid": "132c0866-ca9f-4d1b-8d41-a6aa031b96ac",
+      "title": "Warcraft",
+      "type": "CD",
+      "kind": "Music",
+      "number_of_discs": 2,
+      "release_year": 2006
+    },
+    {
+      "guid": "688158c8-51b3-4b20-8258-977456f65c67",
+      "title": "F&F",
+      "type": "DVD",
+      "kind": "Movie",
+      "number_of_discs": 1,
+      "release_year": 2010
+    },
+    {
+      "guid": "f78cd491-8ea0-442f-9f3c-19157b5036f1",
+      "title": "DOOM",
+      "type": "BluRay",
+      "kind": "Game",
+      "number_of_discs": 4,
+      "release_year": 2010
+    },
+    {
+      "guid": "80a8d1b6-b2dd-4415-8423-8feb351f669c",
+      "title": "Alice",
+      "type": "BluRay",
+      "kind": "Software",
+      "number_of_discs": 4,
+      "release_year": 2010
+    }
+  ]
+}
