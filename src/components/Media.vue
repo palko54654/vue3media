@@ -1,30 +1,51 @@
 <template>
-  <div class="table-row bg-slate-400">
-    <div class="table-cell py-2 rounded">
-      <h1>{{ medium.title }}</h1>
+  <div class="table-row">
+    <div
+      class="table-cell py-3 rounded border-b-[1px] border-gray-200 border-dashed"
+    >
+      <h1 class="text-left font-semibold">{{ medium.title }}</h1>
     </div>
-    <div class="table-cell rounded">
-      <h1>{{ medium.type }}</h1>
+    <div
+      class="table-cell rounded border-b-[1px] border-gray-200 border-dashed"
+    >
+      <h1 class="font-semibold">{{ medium.type }}</h1>
     </div>
-    <div class="table-cell rounded">
-      <h1>{{ medium.kind }}</h1>
+    <div
+      class="table-cell rounded border-b-[1px] border-gray-200 border-dashed"
+    >
+      <h1 class="font-semibold">{{ medium.kind }}</h1>
     </div>
-    <div class="table-cell rounded">
-      <h1>{{ medium.number_of_discs }}</h1>
+    <div
+      class="table-cell rounded border-b-[1px] border-gray-200 border-dashed"
+    >
+      <h1 class="font-semibold">{{ medium.number_of_discs }}</h1>
     </div>
-    <div class="table-cell rounded">
-      <h1>{{ medium.release_year }}</h1>
+    <div
+      class="table-cell rounded border-b-[1px] border-gray-200 border-dashed"
+    >
+      <h1 class="font-semibold">{{ medium.release_year }}</h1>
     </div>
 
-    <div class="table-cell rounded hover:bg-slate-500">
-      <button @click="doPop" class="w-full px-4">
-        <i class="fa-solid fa-pen-to-square"></i>
-      </button>
-    </div>
-    <div class="table-cell rounded hover:bg-slate-500">
-      <button class="w-full px-4" @click="deleteMedium">
-        <i class="fa-solid fa-trash"></i>
-      </button>
+    <div
+      class="table-cell rounded border-b-[1px] border-gray-200 border-dashed"
+    ></div>
+    <div
+      class="table-cell rounded border-b-[1px] border-gray-200 border-dashed"
+    >
+      <div class="flex justify-end">
+        <button
+          @click="doPop"
+          class="w-[30%] ml-7 px-2 bg-gray-100 hover:text-sky-500 rounded py-1 text-gray-400"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button
+          class="w-[30%] ml-1 py-1 hover:text-sky-500 bg-gray-100 rounded text-gray-400"
+          @click="deleteMedium"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
     </div>
 
     <transition name="pop">

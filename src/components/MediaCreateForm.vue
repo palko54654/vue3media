@@ -1,14 +1,25 @@
 <template>
-  <div class="w-[50%] mt-8 flex justify-center mx-auto">
+  <div class="absolute w-[65%] mx-auto top-6 left-[16%] z-20 bg-white rounded">
+    <div class="border-b-[1px] border-solid border-gray-200 pb-2 pt-6">
+      <div class="flex justify-between w-[85%] mx-auto">
+        <h1 class="text-left text-2xl font-semibold">Pridať médium</h1>
+        <button
+          class="0 px-4 py-2 rounded hover:text-sky-500 text-gray-300"
+          @click="emit('close-form')"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
     <div class="flex justify-center">
       <form
         @submit="onSubmit"
         action=""
-        class="w-[100%] justify-center text-center mt-6 grid gap-4 grid-cols-2 align-middle content-center"
+        class="w-[75%] justify-center pb-6 text-center mt-6 grid gap-4 grid-cols-2 align-middle content-center"
       >
         <div>
           <input
-            class="h-[40px] w-full bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            class="h-[40px] w-full bg-gray-200 appearance-none border-2 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300"
             placeholder="Názov"
             type="text"
             v-model="title"
@@ -22,7 +33,9 @@
             name=""
             id=""
           >
-            <option disabled selected hidden value="">Vyberte typ</option>
+            <option class="text-gray-200" disabled selected hidden value="">
+              Vyberte typ
+            </option>
             <option value="CD">CD</option>
             <option value="DVD">DVD</option>
             <option value="BluRay">BluRay</option>
@@ -46,7 +59,7 @@
         </div>
         <div>
           <input
-            class="h-[40px] w-full bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            class="h-[40px] w-full bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300"
             type="number"
             placeholder="Počet diskov"
             v-model.number="number_of_discs"
@@ -57,7 +70,7 @@
         </div>
         <div>
           <input
-            class="h-[40px] w-full bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            class="h-[40px] w-full bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300"
             type="number"
             placeholder="Rok vydania"
             v-model.number="release_year"
@@ -67,7 +80,7 @@
           </p>
         </div>
         <button
-          class="h-[40px] rounded bg-gray-200 hover:bg-green-300 hover:text-white"
+          class="h-[40px] rounded bg-sky-500 hover:bg-sky-600 text-white transition-all"
         >
           Pridať médium
         </button>
@@ -136,8 +149,8 @@ export default {
       }
     },
   },
-  setup() {
-    return {}
+  setup(props, { emit }) {
+    return { emit }
   },
 }
 </script>

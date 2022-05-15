@@ -1,7 +1,17 @@
 <template>
-  <div
-    class="z-20 absolute bg-indigo-600 w-[100%] h-[100%] top-0 left-0 rounded"
-  >
+  <div class="z-20 absolute bg-white w-[100%] h-[100%] top-0 left-0 rounded">
+    <div class="border-b-[1px] border-solid border-gray-200 pb-2 pt-6">
+      <div class="flex justify-between w-[85%] mx-auto">
+        <h1 class="text-left text-2xl font-semibold">Upraviť médium</h1>
+        <a
+          href="#"
+          class="0 px-4 py-2 rounded hover:text-sky-500 text-gray-300"
+          @click="emit('close-popup')"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </div>
+    </div>
     <form
       @submit="onSubmit"
       action=""
@@ -10,7 +20,7 @@
       <label for="Titulok">
         <h3>Titulok</h3>
         <input
-          class="w-[100%] bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          class="w-[100%] bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300"
           placeholder="Názov"
           type="text"
           v-model="title"
@@ -37,7 +47,7 @@
       <label for="">
         <h3>Druh</h3>
         <select
-          class="w-[100%] bg-gray-200 border-2 border-gray-200 py-2 px-4 text-gray-700 rounded leading-tight"
+          class="w-[100%] bg-gray-200 border-2 border-gray-200 py-2 px-4 text-gray-700 focus:text-gray-700 rounded leading-tight"
           required
           name=""
           id=""
@@ -56,7 +66,7 @@
       <label for="">
         <h3>Počet Diskov</h3>
         <input
-          class="w-[100%] bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          class="w-[100%] bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300"
           type="number"
           placeholder="Počet diskov"
           v-model.number="number_of_discs"
@@ -68,7 +78,7 @@
       <label for="">
         <h3>Rok vydania</h3>
         <input
-          class="w-[100%] bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          class="w-[100%] bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300"
           type="number"
           placeholder="Rok vydania"
           v-model.number="release_year"
@@ -79,17 +89,10 @@
       >
       <div class="flex gap-3 justify-center align-middle items-center">
         <button
-          class="w-[30%] h-[30%] rounded bg-gray-200 hover:bg-green-300 hover:text-white"
+          class="w-[100%] h-[45%] rounded bg-sky-500 hover:bg-sky-600 text-white transition-all"
         >
-          Save
+          Upraviť médium
         </button>
-        <a
-          @click="emit('close-popup')"
-          href="#"
-          class="w-[30%] h-[30%] rounded bg-gray-200 hover:bg-green-300 hover:text-white"
-        >
-          Close
-        </a>
       </div>
     </form>
   </div>
